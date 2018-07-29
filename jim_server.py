@@ -90,6 +90,7 @@ class JimServer:
                                 self._close_user_socket(in_socket)
 
                         except Exception as e:
+                            self._close_user_socket(in_socket)
                             print(e)
                 
             except Exception as e:
@@ -225,8 +226,9 @@ class JimServer:
 
         for user in self.user_list.values():
             if socket is user.socket:
-                socket.close()
                 user.socket = None
                 user.is_auth = False
                 user.is_alive = False
                 break
+
+        socket.close()
