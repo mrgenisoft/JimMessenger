@@ -17,3 +17,4 @@ def test_parse_server_args():
     
     argv = ("client_main.py", "localhost", "7777")
     assert parse_client_args(argv) == ("localhost", 7777)
+
