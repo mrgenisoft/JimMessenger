@@ -109,3 +109,4 @@ def test_server_dispatch_message():
     in_jim_msg.user["password"] = "54321"
     socket_, out_jim_msg = server.dispatch_message(socket.socket(socket.AF_INET, socket.SOCK_STREAM), in_jim_msg)
     assert out_jim_msg.response == RESPONSE_CLIENT_INVALID_CRED
+

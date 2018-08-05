@@ -119,3 +119,4 @@ class JimClient:
             print("Ошибка при отправке сообщения")
             return False
 
+
