@@ -84,7 +84,7 @@ class JimMessage:
             str_time = "None"
             
         if self.action is not None:
-            return f"JimMessage(action: {self.action}, time: {str_time}, encoding: {self.encoding})"
+            return f"JimMessage(action: {self.action}, time: {str_time}, enc: {self.encoding}, user: {self.user}, from: {self.from_}, to: {self.to_}, msg: {self.message})"
         elif self.response is not None:
             return f"JimMessage(response: {self.response}, time: {str_time}, encoding: {self.encoding})"
         else:
@@ -182,7 +182,7 @@ class JimMessage:
             if action == "msg":
                 if "to" not in dict_ \
                     or "from" not in dict_ \
-                    or "enconding" not in dict_ \
+                    or "encoding" not in dict_ \
                     or "message" not in dict_:
                     return None
             

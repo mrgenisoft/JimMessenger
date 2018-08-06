@@ -2,10 +2,7 @@
 
 import sys
 
-
-from server_argv import parse_server_args
-from jim_server import JimServer
-from jim_user import JimUser
+from jim_server import JimServer, parse_server_args
 
 
 SERVER_HOST = ""

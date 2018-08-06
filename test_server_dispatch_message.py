@@ -2,7 +2,7 @@
 
 import socket
 import pytest
-
+import logging
 
 from jim_user import *
 from jim_message import *
@@ -10,6 +10,8 @@ from jim_server import JimServer
 
 
 DEFAULT_ENCODING = "utf-8"
+
+logging.disable(logging.CRITICAL)
 
 
 def test_server_dispatch_message():
