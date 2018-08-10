@@ -1,8 +1,12 @@
 ﻿# This Python file uses the following encoding: utf-8
 
 import pytest
+import logging
 
-from server_argv import parse_server_args
+from jim_server import parse_server_args
+
+
+logging.disable(logging.CRITICAL)
 
 
 def test_parse_server_args():
