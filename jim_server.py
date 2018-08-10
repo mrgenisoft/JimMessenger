@@ -282,15 +282,8 @@ class JimServer:
                     else:
                         return user_to.socket, jim_msg
 
-<<<<<<< HEAD
-        socket.close()
-
-=======
                 else:
                     return socket, JimMessage.response_message(RESPONSE_CLIENT_NOT_FOUND, self.encoding)               
             
         else:
             return socket, JimMessage.response_message(RESPONSE_CLIENT_UNAUTHORIZED, self.encoding)
-       
-        
->>>>>>> lesson-2
