@@ -7,7 +7,7 @@ from jim_server import JimServer, parse_server_args
 
 SERVER_HOST = ""
 SERVER_PORT = 7777
-MAX_USERS = 1
+MAX_USERS = 5
 MAX_BUF_SIZE = 1024
 PROBE_INTERVAL_SEC = 60
 DEFAULT_ENCODING = "utf-8"
@@ -41,3 +41,4 @@ except Exception as e:
 jim_server.user_list = user_list
 jim_server.run_server()
     
+

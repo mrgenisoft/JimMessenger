@@ -12,3 +12,5 @@ class JimUser:
         self.is_active = None
         self.date_joined = None
         self.last_login = None
+
+

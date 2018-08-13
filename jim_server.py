@@ -3,6 +3,7 @@
 import socket
 import select
 import time
+import socketserver
 
 from jim_user import *
 from jim_message import *
@@ -287,4 +288,5 @@ class JimServer:
             
         else:
             return socket, JimMessage.response_message(RESPONSE_CLIENT_UNAUTHORIZED, self.encoding)
-
+       
+        

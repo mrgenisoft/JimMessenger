@@ -2,6 +2,7 @@
 
 import sys
 import logging
+from logging.handlers import TimedRotatingFileHandler
 from functools import wraps
 from datetime import date
 
@@ -16,11 +17,11 @@ def func_log(func):
     return log_wrap
     
 
-logger_name = f"jim_server_{date.today().isoformat()}"
+logger_name = f"jim_server"
 logger = logging.getLogger(logger_name)
 formatter = logging.Formatter("%(asctime)s %(levelname)s %(message)s")
 
-fh = logging.FileHandler(f"{logger_name}.log", encoding="utf-8", delay=True)
+fh = TimedRotatingFileHandler(f"{logger_name}.log", when="D", encoding="utf-8", delay=True)
 fh.setLevel(logging.DEBUG)
 fh.setFormatter(formatter)
 logger.addHandler(fh)
